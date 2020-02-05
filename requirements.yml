@@ -1,0 +1,4 @@
+---
+- src: redbeard28.packer
+- src: redbeard28.azurecli
+- src: redbeard28.terraform

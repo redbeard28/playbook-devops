@@ -1,0 +1,11 @@
+---
+- name: "Install Packer"
+  hosts: localhost
+  connection: local
+  become: true
+
+  roles:
+    - { role: redbeard28.packer, tags: packer }
+    - { role: redbeard28.azurecli, tags: azurecli }
+    - { role: redbeard28.terraform, tags: terraform }
+
