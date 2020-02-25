@@ -1,0 +1,5 @@
+# defaults file for terraform-role
+terraform_version: 0.12.21
+# Put it twice because testinfra seems to does not like this one
+terraform_dir: /opt/terraform_{{ terraform_version }}
+
