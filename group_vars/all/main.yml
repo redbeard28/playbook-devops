@@ -1,5 +1,18 @@
 # defaults file for terraform-role
-terraform_version: 0.12.21
+terraform_version: 0.12.25
 # Put it twice because testinfra seems to does not like this one
 terraform_dir: /opt/terraform_{{ terraform_version }}
 
+#### ALIASES ROLE VARS ####
+activate_shell_aliases_extra: false
+aliases_shell: "bash"
+shell_rc_file: "~/.{{ aliases_shell }}rc"
+shell_aliases_file: "~/.{{ aliases_shell }}_aliases"
+
+shell_aliases:
+  - {alias: "ll", command: "ls -rthl --color=auto"}
+  - {alias: "dir", command: "dir --color=auto"}
+  - {alias: "grep", command: "grep --color=auto"}
+
+shell_aliases_extra:
+  - export cookiecutterURL=https://github.com/redbeard28/ansible-role-template.git

@@ -1,11 +1,24 @@
 ---
 - name: "Install Packer"
-  hosts: localhost
-  connection: local
+  hosts: all
+#  connection: local
   become: true
+#  become_user: packer
+  vars:
+    - ansible_become_password: '{{ vault_debian_password }}'
+  vars_files:
+    - "secrets/all.vault"
 
   roles:
-    - { role: redbeard28.packer, tags: packer }
-    - { role: redbeard28.azurecli, tags: azurecli }
-    - { role: redbeard28.terraform, tags: terraform }
+    - { role: redbeard28.basetools, tags: ["base"] }
+    - { role: redbeard28.diagtools, tags: ["base","diag"] }
+    - { role: redbeard28.devtools, tags: ["base","dev"] }
+    - { role: redbeard28.kubectl, tags: ["devops","kubectl","cloud"] }
+#    - { role: redbeard28.bashaliases, tags: ["bashaliases", "mandatory"] }
+    - { role: redbeard28.git, tags: ["git, mandatory"] }
+    - { role: redbeard28.pip3, tags: ["pip3", "blob", "mandatory"] }
+    - { role: redbeard28.python3_apt, tags: ["python3_apt", "blob", "mandatory"] }
+#    - { role: redbeard28.pyazuremodules, tags: ["pyazuremodules", "blob", "mandatory"] }
+#    - { role: redbeard28.azurecli, tags: ["azurecli","cloud"] }
+#    - { role: redbeard28.terraform, tags: ["terraform","cloud"] }
 

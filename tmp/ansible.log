@@ -1,0 +1,59 @@
+2020-09-23 12:58:39,697 p=80387 u=jeremie n=ansible | ERROR! input is not vault encrypted datasecrets/all.vault is not a vault encrypted file for secrets/all.vault
+2020-09-23 12:59:21,680 p=80479 u=jeremie n=ansible | Encryption successful
+2020-09-23 13:02:15,307 p=80654 u=jeremie n=ansible | Decryption successful
+2020-09-23 13:10:08,072 p=81082 u=jeremie n=ansible | ERROR! 'env' is not a valid attribute for a Play
+
+The error appears to be in '/Users/jeremie/Documents/Documents - MacBook Pro de Jérémie/DEAL/GitLab/azure/hubandspoke/azure-images/playbook/provision.yml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- name: "Install Packer"
+  ^ here
+
+2020-09-23 13:17:58,705 p=81468 u=jeremie n=ansible | ERROR! the role 'redbeard28.basetools' was not found in /Users/jeremie/Documents/Documents - MacBook Pro de Jérémie/DEAL/GitLab/azure/hubandspoke/azure-images/playbook/roles:/Users/jeremie/Documents/Documents - MacBook Pro de Jérémie/DEAL/GitLab/azure/hubandspoke/azure-images/playbook/roles:/Users/jeremie/Documents/Documents - MacBook Pro de Jérémie/DEAL/GitLab/azure/hubandspoke/azure-images/playbook/external_roles:/Users/jeremie/Documents/Documents - MacBook Pro de Jérémie/DEAL/GitLab/azure/hubandspoke/azure-images/playbook
+
+The error appears to be in '/Users/jeremie/Documents/Documents - MacBook Pro de Jérémie/DEAL/GitLab/azure/hubandspoke/azure-images/playbook/provision.yml': line 10, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  roles:
+    - { role: redbeard28.basetools, tags: ["base"] }
+      ^ here
+
+2020-09-23 13:24:51,804 p=81817 u=jeremie n=ansible | ERROR! the role 'redbeard28.basetools' was not found in /Users/jeremie/Documents/Documents - MacBook Pro de Jérémie/DEAL/GitLab/azure/hubandspoke/azure-images/playbook/roles:/Users/jeremie/Documents/Documents - MacBook Pro de Jérémie/DEAL/GitLab/azure/hubandspoke/azure-images/playbook/roles:/Users/jeremie/Documents/Documents - MacBook Pro de Jérémie/DEAL/GitLab/azure/hubandspoke/azure-images/playbook/external_roles:/Users/jeremie/Documents/Documents - MacBook Pro de Jérémie/DEAL/GitLab/azure/hubandspoke/azure-images/playbook
+
+The error appears to be in '/Users/jeremie/Documents/Documents - MacBook Pro de Jérémie/DEAL/GitLab/azure/hubandspoke/azure-images/playbook/provision.yml': line 10, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  roles:
+    - { role: redbeard28.basetools, tags: ["base"] }
+      ^ here
+
+2020-09-23 13:30:08,548 p=82106 u=jeremie n=ansible | ERROR! the role 'redbeard28.basetools' was not found in /Users/jeremie/Documents/Documents - MacBook Pro de Jérémie/DEAL/GitLab/azure/hubandspoke/azure-images/playbook/roles:/Users/jeremie/Documents/Documents - MacBook Pro de Jérémie/DEAL/GitLab/azure/hubandspoke/azure-images/playbook/roles:/Users/jeremie/Documents/Documents - MacBook Pro de Jérémie/DEAL/GitLab/azure/hubandspoke/azure-images/playbook
+
+The error appears to be in '/Users/jeremie/Documents/Documents - MacBook Pro de Jérémie/DEAL/GitLab/azure/hubandspoke/azure-images/playbook/provision.yml': line 10, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  roles:
+    - { role: redbeard28.basetools, tags: ["base"] }
+      ^ here
+
+2020-09-23 13:35:56,586 p=82441 u=jeremie n=ansible | ERROR! the role 'redbeard28.basetools' was not found in /Users/jeremie/Documents/Documents - MacBook Pro de Jérémie/DEAL/GitLab/azure/hubandspoke/azure-images/playbook/roles:/Users/jeremie/Documents/Documents - MacBook Pro de Jérémie/DEAL/GitLab/azure/hubandspoke/azure-images/playbook/roles:/Users/jeremie/Documents/Documents - MacBook Pro de Jérémie/DEAL/GitLab/azure/hubandspoke/azure-images/playbook
+
+The error appears to be in '/Users/jeremie/Documents/Documents - MacBook Pro de Jérémie/DEAL/GitLab/azure/hubandspoke/azure-images/playbook/provision.yml': line 10, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  roles:
+    - { role: redbeard28.basetools, tags: ["base"] }
+      ^ here
+
+2020-09-23 13:55:49,311 p=83659 u=jeremie n=ansible | Encryption successful

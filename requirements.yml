@@ -1,4 +1,13 @@
 ---
-- src: redbeard28.packer
-- src: redbeard28.azurecli
-- src: redbeard28.terraform
+#- src: redbeard28.packer
+- src: redbeard28.basetools
+#- src: redbeard28.devtools
+#- src: redbeard28.diagtools
+#- src: redbeard28.azurecli
+##- src: redbeard28.kubectl
+#- src: redbeard28.terraform
+##- src: redbeard28.bashaliases
+#- src: redbeard28.git
+#- src: redbeard28.pip3
+#- src: redbeard28.python3_apt
+#- src: redbeard28.pyazuremodules
