@@ -57,3 +57,253 @@ The offending line appears to be:
       ^ here
 
 2020-09-23 13:55:49,311 p=83659 u=jeremie n=ansible | Encryption successful
+2020-10-05 17:07:37,002 p=58260 u=jeremie n=ansible | PLAY [Install Packer] **********************************************************
+2020-10-05 17:07:37,044 p=58260 u=jeremie n=ansible | TASK [Gathering Facts] *********************************************************
+2020-10-05 17:07:37,044 p=58260 u=jeremie n=ansible | Monday 05 October 2020  17:07:37 +0200 (0:00:00.066)       0:00:00.066 ******** 
+2020-10-05 17:07:45,708 p=58260 u=jeremie n=ansible | ok: [default]
+2020-10-05 17:07:45,734 p=58260 u=jeremie n=ansible | TASK [redbeard28.basetools : debian | buster - Ensure base packages are installed] ***
+2020-10-05 17:07:45,734 p=58260 u=jeremie n=ansible | Monday 05 October 2020  17:07:45 +0200 (0:00:08.690)       0:00:08.757 ******** 
+2020-10-05 17:08:37,208 p=58260 u=jeremie n=ansible | changed: [default]
+2020-10-05 17:08:37,222 p=58260 u=jeremie n=ansible | TASK [redbeard28.diagtools : debian | buster - Ensure diagnostics packages are installed] ***
+2020-10-05 17:08:37,222 p=58260 u=jeremie n=ansible | Monday 05 October 2020  17:08:37 +0200 (0:00:51.487)       0:01:00.245 ******** 
+2020-10-05 17:08:46,144 p=58260 u=jeremie n=ansible | changed: [default]
+2020-10-05 17:08:46,157 p=58260 u=jeremie n=ansible | TASK [redbeard28.devtools : {{ myansible_prefix_task_name }}Include OS {{ ansible_os_family }} specifics variables.] ***
+2020-10-05 17:08:46,157 p=58260 u=jeremie n=ansible | Monday 05 October 2020  17:08:46 +0200 (0:00:08.935)       0:01:09.180 ******** 
+2020-10-05 17:08:46,187 p=58260 u=jeremie n=ansible | ok: [default]
+2020-10-05 17:08:46,198 p=58260 u=jeremie n=ansible | TASK [redbeard28.devtools : {{ myansible_prefix_task_name }}Install devtools packages] ***
+2020-10-05 17:08:46,198 p=58260 u=jeremie n=ansible | Monday 05 October 2020  17:08:46 +0200 (0:00:00.040)       0:01:09.220 ******** 
+2020-10-05 17:09:34,435 p=58260 u=jeremie n=ansible | changed: [default] => (item=build-essential)
+2020-10-05 17:09:38,508 p=58260 u=jeremie n=ansible | changed: [default] => (item=libssl-dev)
+2020-10-05 17:09:38,528 p=58260 u=jeremie n=ansible | TASK [redbeard28.kubectl : debian | buster - Get latest version] ***************
+2020-10-05 17:09:38,528 p=58260 u=jeremie n=ansible | Monday 05 October 2020  17:09:38 +0200 (0:00:52.330)       0:02:01.550 ******** 
+2020-10-05 17:09:40,757 p=58260 u=jeremie n=ansible | changed: [default]
+2020-10-05 17:09:40,770 p=58260 u=jeremie n=ansible | TASK [redbeard28.kubectl : debian | buster - Extract Version number] ***********
+2020-10-05 17:09:40,770 p=58260 u=jeremie n=ansible | Monday 05 October 2020  17:09:40 +0200 (0:00:02.242)       0:02:03.793 ******** 
+2020-10-05 17:09:42,729 p=58260 u=jeremie n=ansible | changed: [default]
+2020-10-05 17:09:42,742 p=58260 u=jeremie n=ansible | TASK [redbeard28.kubectl : {{ ansible_distribution | lower }} | {{ ansible_distribution_release }} - Create temp folder {{ kubectl_temp_folder }}] ***
+2020-10-05 17:09:42,742 p=58260 u=jeremie n=ansible | Monday 05 October 2020  17:09:42 +0200 (0:00:01.971)       0:02:05.765 ******** 
+2020-10-05 17:09:44,781 p=58260 u=jeremie n=ansible | changed: [default]
+2020-10-05 17:09:44,793 p=58260 u=jeremie n=ansible | TASK [redbeard28.kubectl : debian | buster - Download extracted Version v1.19.2] ***
+2020-10-05 17:09:44,794 p=58260 u=jeremie n=ansible | Monday 05 October 2020  17:09:44 +0200 (0:00:02.051)       0:02:07.816 ******** 
+2020-10-05 17:09:48,604 p=58260 u=jeremie n=ansible | changed: [default]
+2020-10-05 17:09:48,617 p=58260 u=jeremie n=ansible | TASK [redbeard28.kubectl : debian | buster - Link extracted Version /opt/kubectl-v1.19.2/kubectl to PATH] ***
+2020-10-05 17:09:48,617 p=58260 u=jeremie n=ansible | Monday 05 October 2020  17:09:48 +0200 (0:00:03.823)       0:02:11.639 ******** 
+2020-10-05 17:09:50,514 p=58260 u=jeremie n=ansible | changed: [default]
+2020-10-05 17:09:50,526 p=58260 u=jeremie n=ansible | TASK [redbeard28.git : debian | buster - Install Git] **************************
+2020-10-05 17:09:50,526 p=58260 u=jeremie n=ansible | Monday 05 October 2020  17:09:50 +0200 (0:00:01.908)       0:02:13.548 ******** 
+2020-10-05 17:09:52,760 p=58260 u=jeremie n=ansible | ok: [default]
+2020-10-05 17:09:52,771 p=58260 u=jeremie n=ansible | TASK [redbeard28.pip3 : debian | buster - Install ['python3-pip']] *************
+2020-10-05 17:09:52,772 p=58260 u=jeremie n=ansible | Monday 05 October 2020  17:09:52 +0200 (0:00:02.245)       0:02:15.794 ******** 
+2020-10-05 17:10:20,511 p=58260 u=jeremie n=ansible | changed: [default]
+2020-10-05 17:10:20,526 p=58260 u=jeremie n=ansible | TASK [redbeard28.python3_apt : debian | buster - Install Python3-apt] **********
+2020-10-05 17:10:20,526 p=58260 u=jeremie n=ansible | Monday 05 October 2020  17:10:20 +0200 (0:00:27.754)       0:02:43.548 ******** 
+2020-10-05 17:10:22,707 p=58260 u=jeremie n=ansible | ok: [default]
+2020-10-05 17:10:22,720 p=58260 u=jeremie n=ansible | TASK [redbeard28.pyazuremodules : debian | buster - Copy requirements-azure.txt] ***
+2020-10-05 17:10:22,720 p=58260 u=jeremie n=ansible | Monday 05 October 2020  17:10:22 +0200 (0:00:02.194)       0:02:45.743 ******** 
+2020-10-05 17:10:27,588 p=58260 u=jeremie n=ansible | changed: [default]
+2020-10-05 17:10:27,600 p=58260 u=jeremie n=ansible | TASK [redbeard28.pyazuremodules : debian | buster - Install with pip3] *********
+2020-10-05 17:10:27,600 p=58260 u=jeremie n=ansible | Monday 05 October 2020  17:10:27 +0200 (0:00:04.879)       0:02:50.623 ******** 
+2020-10-05 17:11:13,571 p=58260 u=jeremie n=ansible | changed: [default]
+2020-10-05 17:11:13,583 p=58260 u=jeremie n=ansible | TASK [redbeard28.azurecli : debian | buster - Using tasks in prepare-Debian.yml] ***
+2020-10-05 17:11:13,583 p=58260 u=jeremie n=ansible | Monday 05 October 2020  17:11:13 +0200 (0:00:45.982)       0:03:36.606 ******** 
+2020-10-05 17:11:13,619 p=58260 u=jeremie n=ansible | included: /Users/jeremie/.ansible/roles/redbeard28.azurecli/tasks/prepare-Debian.yml for default
+2020-10-05 17:11:13,634 p=58260 u=jeremie n=ansible | TASK [redbeard28.azurecli : debian | buster - Refresh Cache] *******************
+2020-10-05 17:11:13,635 p=58260 u=jeremie n=ansible | Monday 05 October 2020  17:11:13 +0200 (0:00:00.051)       0:03:36.657 ******** 
+2020-10-05 17:11:16,300 p=58260 u=jeremie n=ansible | ok: [default]
+2020-10-05 17:11:16,312 p=58260 u=jeremie n=ansible | TASK [redbeard28.azurecli : debian | buster - Download Microsoft Repo GPG KEY] ***
+2020-10-05 17:11:16,312 p=58260 u=jeremie n=ansible | Monday 05 October 2020  17:11:16 +0200 (0:00:02.677)       0:03:39.334 ******** 
+2020-10-05 17:11:18,580 p=58260 u=jeremie n=ansible | changed: [default]
+2020-10-05 17:11:18,593 p=58260 u=jeremie n=ansible | TASK [redbeard28.azurecli : debian | buster - Add Microsoft Repo] **************
+2020-10-05 17:11:18,593 p=58260 u=jeremie n=ansible | Monday 05 October 2020  17:11:18 +0200 (0:00:02.281)       0:03:41.616 ******** 
+2020-10-05 17:11:26,534 p=58260 u=jeremie n=ansible | changed: [default]
+2020-10-05 17:11:26,546 p=58260 u=jeremie n=ansible | TASK [redbeard28.azurecli : debian | buster - Refresh Cache after Microsoft Repo was installed] ***
+2020-10-05 17:11:26,546 p=58260 u=jeremie n=ansible | Monday 05 October 2020  17:11:26 +0200 (0:00:07.953)       0:03:49.569 ******** 
+2020-10-05 17:11:30,171 p=58260 u=jeremie n=ansible | ok: [default]
+2020-10-05 17:11:30,186 p=58260 u=jeremie n=ansible | TASK [redbeard28.azurecli : debian | buster - Install azure-cli package] *******
+2020-10-05 17:11:30,186 p=58260 u=jeremie n=ansible | Monday 05 October 2020  17:11:30 +0200 (0:00:03.639)       0:03:53.208 ******** 
+2020-10-05 17:12:40,816 p=58260 u=jeremie n=ansible | changed: [default]
+2020-10-05 17:12:40,828 p=58260 u=jeremie n=ansible | TASK [redbeard28.terraform : debian | buster - Update System] ******************
+2020-10-05 17:12:40,828 p=58260 u=jeremie n=ansible | Monday 05 October 2020  17:12:40 +0200 (0:01:10.642)       0:05:03.851 ******** 
+2020-10-05 17:12:43,612 p=58260 u=jeremie n=ansible | ok: [default]
+2020-10-05 17:12:43,625 p=58260 u=jeremie n=ansible | TASK [redbeard28.terraform : debian | buster - Update System] ******************
+2020-10-05 17:12:43,625 p=58260 u=jeremie n=ansible | Monday 05 October 2020  17:12:43 +0200 (0:00:02.796)       0:05:06.647 ******** 
+2020-10-05 17:12:43,649 p=58260 u=jeremie n=ansible | skipping: [default]
+2020-10-05 17:12:43,660 p=58260 u=jeremie n=ansible | TASK [redbeard28.terraform : debian | buster - Create terraform user] **********
+2020-10-05 17:12:43,661 p=58260 u=jeremie n=ansible | Monday 05 October 2020  17:12:43 +0200 (0:00:00.035)       0:05:06.683 ******** 
+2020-10-05 17:12:45,942 p=58260 u=jeremie n=ansible | changed: [default]
+2020-10-05 17:12:45,954 p=58260 u=jeremie n=ansible | TASK [redbeard28.terraform : debian | buster - Create Terraform directory] *****
+2020-10-05 17:12:45,955 p=58260 u=jeremie n=ansible | Monday 05 October 2020  17:12:45 +0200 (0:00:02.293)       0:05:08.977 ******** 
+2020-10-05 17:12:47,764 p=58260 u=jeremie n=ansible | changed: [default]
+2020-10-05 17:12:47,777 p=58260 u=jeremie n=ansible | TASK [redbeard28.terraform : debian | buster - Check terraform version] ********
+2020-10-05 17:12:47,778 p=58260 u=jeremie n=ansible | Monday 05 October 2020  17:12:47 +0200 (0:00:01.823)       0:05:10.800 ******** 
+2020-10-05 17:12:49,675 p=58260 u=jeremie n=ansible | ok: [default]
+2020-10-05 17:12:49,686 p=58260 u=jeremie n=ansible | TASK [redbeard28.terraform : debian | buster - Download terraform archive Linux 32 bits] ***
+2020-10-05 17:12:49,686 p=58260 u=jeremie n=ansible | Monday 05 October 2020  17:12:49 +0200 (0:00:01.908)       0:05:12.709 ******** 
+2020-10-05 17:12:49,712 p=58260 u=jeremie n=ansible | skipping: [default]
+2020-10-05 17:12:49,723 p=58260 u=jeremie n=ansible | TASK [redbeard28.terraform : debian | buster - Download terraform archive Linux 64 bits] ***
+2020-10-05 17:12:49,723 p=58260 u=jeremie n=ansible | Monday 05 October 2020  17:12:49 +0200 (0:00:00.036)       0:05:12.746 ******** 
+2020-10-05 17:12:51,985 p=58260 u=jeremie n=ansible | changed: [default]
+2020-10-05 17:12:51,996 p=58260 u=jeremie n=ansible | TASK [redbeard28.terraform : debian | buster - Download terraform archive Linux 64 bits] ***
+2020-10-05 17:12:51,996 p=58260 u=jeremie n=ansible | Monday 05 October 2020  17:12:51 +0200 (0:00:02.273)       0:05:15.019 ******** 
+2020-10-05 17:12:52,029 p=58260 u=jeremie n=ansible | skipping: [default]
+2020-10-05 17:12:52,042 p=58260 u=jeremie n=ansible | TASK [redbeard28.terraform : debian | buster - Install unzip to unarchive terraform] ***
+2020-10-05 17:12:52,042 p=58260 u=jeremie n=ansible | Monday 05 October 2020  17:12:52 +0200 (0:00:00.045)       0:05:15.064 ******** 
+2020-10-05 17:12:54,435 p=58260 u=jeremie n=ansible | ok: [default]
+2020-10-05 17:12:54,448 p=58260 u=jeremie n=ansible | TASK [redbeard28.terraform : debian | buster - Unarchive Terraform archive] ****
+2020-10-05 17:12:54,448 p=58260 u=jeremie n=ansible | Monday 05 October 2020  17:12:54 +0200 (0:00:02.406)       0:05:17.471 ******** 
+2020-10-05 17:12:58,327 p=58260 u=jeremie n=ansible | changed: [default]
+2020-10-05 17:12:58,339 p=58260 u=jeremie n=ansible | TASK [redbeard28.terraform : debian | buster - Make terraform_user terraform directory owner] ***
+2020-10-05 17:12:58,339 p=58260 u=jeremie n=ansible | Monday 05 October 2020  17:12:58 +0200 (0:00:03.890)       0:05:21.362 ******** 
+2020-10-05 17:13:00,166 p=58260 u=jeremie n=ansible | changed: [default]
+2020-10-05 17:13:00,178 p=58260 u=jeremie n=ansible | TASK [redbeard28.terraform : debian | buster - Adding terraform command to user path] ***
+2020-10-05 17:13:00,178 p=58260 u=jeremie n=ansible | Monday 05 October 2020  17:13:00 +0200 (0:00:01.838)       0:05:23.201 ******** 
+2020-10-05 17:13:01,843 p=58260 u=jeremie n=ansible | changed: [default]
+2020-10-05 17:13:01,845 p=58260 u=jeremie n=ansible | PLAY RECAP *********************************************************************
+2020-10-05 17:13:01,845 p=58260 u=jeremie n=ansible | default                    : ok=30   changed=20   unreachable=0    failed=0    skipped=3    rescued=0    ignored=0   
+2020-10-05 17:13:01,846 p=58260 u=jeremie n=ansible | Monday 05 October 2020  17:13:01 +0200 (0:00:01.667)       0:05:24.868 ******** 
+2020-10-05 17:13:01,846 p=58260 u=jeremie n=ansible | =============================================================================== 
+2020-10-05 17:13:01,846 p=58260 u=jeremie n=ansible | redbeard28.azurecli : debian | buster - Install azure-cli package ------ 70.64s
+2020-10-05 17:13:01,846 p=58260 u=jeremie n=ansible | redbeard28.devtools : {{ myansible_prefix_task_name }}Install devtools packages -- 52.33s
+2020-10-05 17:13:01,846 p=58260 u=jeremie n=ansible | redbeard28.basetools : debian | buster - Ensure base packages are installed -- 51.49s
+2020-10-05 17:13:01,846 p=58260 u=jeremie n=ansible | redbeard28.pyazuremodules : debian | buster - Install with pip3 -------- 45.98s
+2020-10-05 17:13:01,846 p=58260 u=jeremie n=ansible | redbeard28.pip3 : debian | buster - Install ['python3-pip'] ------------ 27.75s
+2020-10-05 17:13:01,846 p=58260 u=jeremie n=ansible | redbeard28.diagtools : debian | buster - Ensure diagnostics packages are installed --- 8.94s
+2020-10-05 17:13:01,846 p=58260 u=jeremie n=ansible | Gathering Facts --------------------------------------------------------- 8.69s
+2020-10-05 17:13:01,847 p=58260 u=jeremie n=ansible | redbeard28.azurecli : debian | buster - Add Microsoft Repo -------------- 7.95s
+2020-10-05 17:13:01,847 p=58260 u=jeremie n=ansible | redbeard28.pyazuremodules : debian | buster - Copy requirements-azure.txt --- 4.88s
+2020-10-05 17:13:01,847 p=58260 u=jeremie n=ansible | redbeard28.terraform : debian | buster - Unarchive Terraform archive ---- 3.89s
+2020-10-05 17:13:01,847 p=58260 u=jeremie n=ansible | redbeard28.kubectl : debian | buster - Download extracted Version v1.19.2 --- 3.82s
+2020-10-05 17:13:01,847 p=58260 u=jeremie n=ansible | redbeard28.azurecli : debian | buster - Refresh Cache after Microsoft Repo was installed --- 3.64s
+2020-10-05 17:13:01,847 p=58260 u=jeremie n=ansible | redbeard28.terraform : debian | buster - Update System ------------------ 2.80s
+2020-10-05 17:13:01,847 p=58260 u=jeremie n=ansible | redbeard28.azurecli : debian | buster - Refresh Cache ------------------- 2.68s
+2020-10-05 17:13:01,847 p=58260 u=jeremie n=ansible | redbeard28.terraform : debian | buster - Install unzip to unarchive terraform --- 2.41s
+2020-10-05 17:13:01,847 p=58260 u=jeremie n=ansible | redbeard28.terraform : debian | buster - Create terraform user ---------- 2.29s
+2020-10-05 17:13:01,848 p=58260 u=jeremie n=ansible | redbeard28.azurecli : debian | buster - Download Microsoft Repo GPG KEY --- 2.28s
+2020-10-05 17:13:01,848 p=58260 u=jeremie n=ansible | redbeard28.terraform : debian | buster - Download terraform archive Linux 64 bits --- 2.27s
+2020-10-05 17:13:01,848 p=58260 u=jeremie n=ansible | redbeard28.git : debian | buster - Install Git -------------------------- 2.25s
+2020-10-05 17:13:01,848 p=58260 u=jeremie n=ansible | redbeard28.kubectl : debian | buster - Get latest version --------------- 2.24s
+2020-10-05 18:41:57,941 p=2091 u=jeremie n=ansible | PLAY [Install Packer] **********************************************************
+2020-10-05 18:41:57,982 p=2091 u=jeremie n=ansible | TASK [Gathering Facts] *********************************************************
+2020-10-05 18:41:57,983 p=2091 u=jeremie n=ansible | Monday 05 October 2020  18:41:57 +0200 (0:00:00.062)       0:00:00.062 ******** 
+2020-10-05 18:42:00,784 p=2091 u=jeremie n=ansible | ok: [default]
+2020-10-05 18:42:00,807 p=2091 u=jeremie n=ansible | TASK [redbeard28.basetools : debian | buster - Ensure base packages are installed] ***
+2020-10-05 18:42:00,807 p=2091 u=jeremie n=ansible | Monday 05 October 2020  18:42:00 +0200 (0:00:02.824)       0:00:02.886 ******** 
+2020-10-05 18:42:53,510 p=2091 u=jeremie n=ansible | changed: [default]
+2020-10-05 18:42:53,525 p=2091 u=jeremie n=ansible | TASK [redbeard28.diagtools : debian | buster - Ensure diagnostics packages are installed] ***
+2020-10-05 18:42:53,526 p=2091 u=jeremie n=ansible | Monday 05 October 2020  18:42:53 +0200 (0:00:52.718)       0:00:55.605 ******** 
+2020-10-05 18:43:02,368 p=2091 u=jeremie n=ansible | changed: [default]
+2020-10-05 18:43:02,381 p=2091 u=jeremie n=ansible | TASK [redbeard28.devtools : {{ myansible_prefix_task_name }}Include OS {{ ansible_os_family }} specifics variables.] ***
+2020-10-05 18:43:02,381 p=2091 u=jeremie n=ansible | Monday 05 October 2020  18:43:02 +0200 (0:00:08.855)       0:01:04.460 ******** 
+2020-10-05 18:43:02,405 p=2091 u=jeremie n=ansible | ok: [default]
+2020-10-05 18:43:02,416 p=2091 u=jeremie n=ansible | TASK [redbeard28.devtools : {{ myansible_prefix_task_name }}Install devtools packages] ***
+2020-10-05 18:43:02,416 p=2091 u=jeremie n=ansible | Monday 05 October 2020  18:43:02 +0200 (0:00:00.035)       0:01:04.495 ******** 
+2020-10-05 18:43:53,401 p=2091 u=jeremie n=ansible | changed: [default] => (item=build-essential)
+2020-10-05 18:43:56,668 p=2091 u=jeremie n=ansible | changed: [default] => (item=libssl-dev)
+2020-10-05 18:43:56,684 p=2091 u=jeremie n=ansible | TASK [redbeard28.kubectl : debian | buster - Get latest version] ***************
+2020-10-05 18:43:56,684 p=2091 u=jeremie n=ansible | Monday 05 October 2020  18:43:56 +0200 (0:00:54.267)       0:01:58.763 ******** 
+2020-10-05 18:43:57,789 p=2091 u=jeremie n=ansible | changed: [default]
+2020-10-05 18:43:57,802 p=2091 u=jeremie n=ansible | TASK [redbeard28.kubectl : debian | buster - Extract Version number] ***********
+2020-10-05 18:43:57,802 p=2091 u=jeremie n=ansible | Monday 05 October 2020  18:43:57 +0200 (0:00:01.118)       0:01:59.882 ******** 
+2020-10-05 18:43:58,520 p=2091 u=jeremie n=ansible | changed: [default]
+2020-10-05 18:43:58,532 p=2091 u=jeremie n=ansible | TASK [redbeard28.kubectl : {{ ansible_distribution | lower }} | {{ ansible_distribution_release }} - Create temp folder {{ kubectl_temp_folder }}] ***
+2020-10-05 18:43:58,532 p=2091 u=jeremie n=ansible | Monday 05 October 2020  18:43:58 +0200 (0:00:00.729)       0:02:00.611 ******** 
+2020-10-05 18:43:59,359 p=2091 u=jeremie n=ansible | changed: [default]
+2020-10-05 18:43:59,371 p=2091 u=jeremie n=ansible | TASK [redbeard28.kubectl : debian | buster - Download extracted Version v1.19.2] ***
+2020-10-05 18:43:59,372 p=2091 u=jeremie n=ansible | Monday 05 October 2020  18:43:59 +0200 (0:00:00.839)       0:02:01.451 ******** 
+2020-10-05 18:44:00,635 p=2091 u=jeremie n=ansible | changed: [default]
+2020-10-05 18:44:00,646 p=2091 u=jeremie n=ansible | TASK [redbeard28.kubectl : debian | buster - Link extracted Version /opt/kubectl-v1.19.2/kubectl to PATH] ***
+2020-10-05 18:44:00,647 p=2091 u=jeremie n=ansible | Monday 05 October 2020  18:44:00 +0200 (0:00:01.274)       0:02:02.726 ******** 
+2020-10-05 18:44:01,213 p=2091 u=jeremie n=ansible | changed: [default]
+2020-10-05 18:44:01,224 p=2091 u=jeremie n=ansible | TASK [redbeard28.git : debian | buster - Install Git] **************************
+2020-10-05 18:44:01,224 p=2091 u=jeremie n=ansible | Monday 05 October 2020  18:44:01 +0200 (0:00:00.577)       0:02:03.303 ******** 
+2020-10-05 18:44:02,322 p=2091 u=jeremie n=ansible | ok: [default]
+2020-10-05 18:44:02,334 p=2091 u=jeremie n=ansible | TASK [redbeard28.pip3 : debian | buster - Install ['python3-pip']] *************
+2020-10-05 18:44:02,335 p=2091 u=jeremie n=ansible | Monday 05 October 2020  18:44:02 +0200 (0:00:01.110)       0:02:04.414 ******** 
+2020-10-05 18:44:35,370 p=2091 u=jeremie n=ansible | changed: [default]
+2020-10-05 18:44:35,382 p=2091 u=jeremie n=ansible | TASK [redbeard28.python3_apt : debian | buster - Install Python3-apt] **********
+2020-10-05 18:44:35,383 p=2091 u=jeremie n=ansible | Monday 05 October 2020  18:44:35 +0200 (0:00:33.047)       0:02:37.462 ******** 
+2020-10-05 18:44:36,475 p=2091 u=jeremie n=ansible | ok: [default]
+2020-10-05 18:44:36,487 p=2091 u=jeremie n=ansible | TASK [redbeard28.pyazuremodules : debian | buster - Copy requirements-azure.txt] ***
+2020-10-05 18:44:36,487 p=2091 u=jeremie n=ansible | Monday 05 October 2020  18:44:36 +0200 (0:00:01.104)       0:02:38.567 ******** 
+2020-10-05 18:44:38,278 p=2091 u=jeremie n=ansible | changed: [default]
+2020-10-05 18:44:38,290 p=2091 u=jeremie n=ansible | TASK [redbeard28.pyazuremodules : debian | buster - Install with pip3] *********
+2020-10-05 18:44:38,290 p=2091 u=jeremie n=ansible | Monday 05 October 2020  18:44:38 +0200 (0:00:01.802)       0:02:40.369 ******** 
+2020-10-05 18:45:21,205 p=2091 u=jeremie n=ansible | changed: [default]
+2020-10-05 18:45:21,217 p=2091 u=jeremie n=ansible | TASK [redbeard28.azurecli : debian | buster - Using tasks in prepare-Debian.yml] ***
+2020-10-05 18:45:21,217 p=2091 u=jeremie n=ansible | Monday 05 October 2020  18:45:21 +0200 (0:00:42.927)       0:03:23.297 ******** 
+2020-10-05 18:45:21,249 p=2091 u=jeremie n=ansible | included: /Users/jeremie/.ansible/roles/redbeard28.azurecli/tasks/prepare-Debian.yml for default
+2020-10-05 18:45:21,261 p=2091 u=jeremie n=ansible | TASK [redbeard28.azurecli : debian | buster - Refresh Cache] *******************
+2020-10-05 18:45:21,261 p=2091 u=jeremie n=ansible | Monday 05 October 2020  18:45:21 +0200 (0:00:00.044)       0:03:23.341 ******** 
+2020-10-05 18:45:22,898 p=2091 u=jeremie n=ansible | ok: [default]
+2020-10-05 18:45:22,910 p=2091 u=jeremie n=ansible | TASK [redbeard28.azurecli : debian | buster - Download Microsoft Repo GPG KEY] ***
+2020-10-05 18:45:22,910 p=2091 u=jeremie n=ansible | Monday 05 October 2020  18:45:22 +0200 (0:00:01.648)       0:03:24.989 ******** 
+2020-10-05 18:45:24,144 p=2091 u=jeremie n=ansible | changed: [default]
+2020-10-05 18:45:24,155 p=2091 u=jeremie n=ansible | TASK [redbeard28.azurecli : debian | buster - Add Microsoft Repo] **************
+2020-10-05 18:45:24,156 p=2091 u=jeremie n=ansible | Monday 05 October 2020  18:45:24 +0200 (0:00:01.245)       0:03:26.235 ******** 
+2020-10-05 18:45:31,010 p=2091 u=jeremie n=ansible | changed: [default]
+2020-10-05 18:45:31,022 p=2091 u=jeremie n=ansible | TASK [redbeard28.azurecli : debian | buster - Refresh Cache after Microsoft Repo was installed] ***
+2020-10-05 18:45:31,022 p=2091 u=jeremie n=ansible | Monday 05 October 2020  18:45:31 +0200 (0:00:06.866)       0:03:33.101 ******** 
+2020-10-05 18:45:35,174 p=2091 u=jeremie n=ansible | ok: [default]
+2020-10-05 18:45:35,186 p=2091 u=jeremie n=ansible | TASK [redbeard28.azurecli : debian | buster - Install azure-cli package] *******
+2020-10-05 18:45:35,186 p=2091 u=jeremie n=ansible | Monday 05 October 2020  18:45:35 +0200 (0:00:04.163)       0:03:37.265 ******** 
+2020-10-05 18:46:46,102 p=2091 u=jeremie n=ansible | changed: [default]
+2020-10-05 18:46:46,113 p=2091 u=jeremie n=ansible | TASK [redbeard28.terraform : debian | buster - Update System] ******************
+2020-10-05 18:46:46,114 p=2091 u=jeremie n=ansible | Monday 05 October 2020  18:46:46 +0200 (0:01:10.927)       0:04:48.193 ******** 
+2020-10-05 18:46:47,897 p=2091 u=jeremie n=ansible | ok: [default]
+2020-10-05 18:46:47,909 p=2091 u=jeremie n=ansible | TASK [redbeard28.terraform : debian | buster - Update System] ******************
+2020-10-05 18:46:47,910 p=2091 u=jeremie n=ansible | Monday 05 October 2020  18:46:47 +0200 (0:00:01.795)       0:04:49.989 ******** 
+2020-10-05 18:46:47,930 p=2091 u=jeremie n=ansible | skipping: [default]
+2020-10-05 18:46:47,942 p=2091 u=jeremie n=ansible | TASK [redbeard28.terraform : debian | buster - Create terraform user] **********
+2020-10-05 18:46:47,942 p=2091 u=jeremie n=ansible | Monday 05 October 2020  18:46:47 +0200 (0:00:00.032)       0:04:50.021 ******** 
+2020-10-05 18:46:49,186 p=2091 u=jeremie n=ansible | changed: [default]
+2020-10-05 18:46:49,197 p=2091 u=jeremie n=ansible | TASK [redbeard28.terraform : debian | buster - Create Terraform directory] *****
+2020-10-05 18:46:49,197 p=2091 u=jeremie n=ansible | Monday 05 October 2020  18:46:49 +0200 (0:00:01.255)       0:04:51.276 ******** 
+2020-10-05 18:46:49,784 p=2091 u=jeremie n=ansible | changed: [default]
+2020-10-05 18:46:49,797 p=2091 u=jeremie n=ansible | TASK [redbeard28.terraform : debian | buster - Check terraform version] ********
+2020-10-05 18:46:49,797 p=2091 u=jeremie n=ansible | Monday 05 October 2020  18:46:49 +0200 (0:00:00.599)       0:04:51.876 ******** 
+2020-10-05 18:46:50,363 p=2091 u=jeremie n=ansible | ok: [default]
+2020-10-05 18:46:50,374 p=2091 u=jeremie n=ansible | TASK [redbeard28.terraform : debian | buster - Download terraform archive Linux 32 bits] ***
+2020-10-05 18:46:50,374 p=2091 u=jeremie n=ansible | Monday 05 October 2020  18:46:50 +0200 (0:00:00.577)       0:04:52.453 ******** 
+2020-10-05 18:46:50,397 p=2091 u=jeremie n=ansible | skipping: [default]
+2020-10-05 18:46:50,408 p=2091 u=jeremie n=ansible | TASK [redbeard28.terraform : debian | buster - Download terraform archive Linux 64 bits] ***
+2020-10-05 18:46:50,408 p=2091 u=jeremie n=ansible | Monday 05 October 2020  18:46:50 +0200 (0:00:00.033)       0:04:52.487 ******** 
+2020-10-05 18:46:51,553 p=2091 u=jeremie n=ansible | changed: [default]
+2020-10-05 18:46:51,565 p=2091 u=jeremie n=ansible | TASK [redbeard28.terraform : debian | buster - Download terraform archive Linux 64 bits] ***
+2020-10-05 18:46:51,565 p=2091 u=jeremie n=ansible | Monday 05 October 2020  18:46:51 +0200 (0:00:01.157)       0:04:53.644 ******** 
+2020-10-05 18:46:51,588 p=2091 u=jeremie n=ansible | skipping: [default]
+2020-10-05 18:46:51,599 p=2091 u=jeremie n=ansible | TASK [redbeard28.terraform : debian | buster - Install unzip to unarchive terraform] ***
+2020-10-05 18:46:51,599 p=2091 u=jeremie n=ansible | Monday 05 October 2020  18:46:51 +0200 (0:00:00.034)       0:04:53.678 ******** 
+2020-10-05 18:46:52,696 p=2091 u=jeremie n=ansible | ok: [default]
+2020-10-05 18:46:52,709 p=2091 u=jeremie n=ansible | TASK [redbeard28.terraform : debian | buster - Unarchive Terraform archive] ****
+2020-10-05 18:46:52,709 p=2091 u=jeremie n=ansible | Monday 05 October 2020  18:46:52 +0200 (0:00:01.109)       0:04:54.788 ******** 
+2020-10-05 18:46:54,461 p=2091 u=jeremie n=ansible | changed: [default]
+2020-10-05 18:46:54,473 p=2091 u=jeremie n=ansible | TASK [redbeard28.terraform : debian | buster - Make terraform_user terraform directory owner] ***
+2020-10-05 18:46:54,473 p=2091 u=jeremie n=ansible | Monday 05 October 2020  18:46:54 +0200 (0:00:01.763)       0:04:56.552 ******** 
+2020-10-05 18:46:55,027 p=2091 u=jeremie n=ansible | changed: [default]
+2020-10-05 18:46:55,039 p=2091 u=jeremie n=ansible | TASK [redbeard28.terraform : debian | buster - Adding terraform command to user path] ***
+2020-10-05 18:46:55,039 p=2091 u=jeremie n=ansible | Monday 05 October 2020  18:46:55 +0200 (0:00:00.566)       0:04:57.118 ******** 
+2020-10-05 18:46:55,606 p=2091 u=jeremie n=ansible | changed: [default]
+2020-10-05 18:46:55,608 p=2091 u=jeremie n=ansible | PLAY RECAP *********************************************************************
+2020-10-05 18:46:55,608 p=2091 u=jeremie n=ansible | default                    : ok=30   changed=20   unreachable=0    failed=0    skipped=3    rescued=0    ignored=0   
+2020-10-05 18:46:55,609 p=2091 u=jeremie n=ansible | Monday 05 October 2020  18:46:55 +0200 (0:00:00.569)       0:04:57.688 ******** 
+2020-10-05 18:46:55,609 p=2091 u=jeremie n=ansible | =============================================================================== 
+2020-10-05 18:46:55,609 p=2091 u=jeremie n=ansible | redbeard28.azurecli : debian | buster - Install azure-cli package ------ 70.93s
+2020-10-05 18:46:55,609 p=2091 u=jeremie n=ansible | redbeard28.devtools : {{ myansible_prefix_task_name }}Install devtools packages -- 54.27s
+2020-10-05 18:46:55,609 p=2091 u=jeremie n=ansible | redbeard28.basetools : debian | buster - Ensure base packages are installed -- 52.72s
+2020-10-05 18:46:55,609 p=2091 u=jeremie n=ansible | redbeard28.pyazuremodules : debian | buster - Install with pip3 -------- 42.93s
+2020-10-05 18:46:55,609 p=2091 u=jeremie n=ansible | redbeard28.pip3 : debian | buster - Install ['python3-pip'] ------------ 33.05s
+2020-10-05 18:46:55,609 p=2091 u=jeremie n=ansible | redbeard28.diagtools : debian | buster - Ensure diagnostics packages are installed --- 8.86s
+2020-10-05 18:46:55,609 p=2091 u=jeremie n=ansible | redbeard28.azurecli : debian | buster - Add Microsoft Repo -------------- 6.87s
+2020-10-05 18:46:55,610 p=2091 u=jeremie n=ansible | redbeard28.azurecli : debian | buster - Refresh Cache after Microsoft Repo was installed --- 4.16s
+2020-10-05 18:46:55,610 p=2091 u=jeremie n=ansible | Gathering Facts --------------------------------------------------------- 2.82s
+2020-10-05 18:46:55,610 p=2091 u=jeremie n=ansible | redbeard28.pyazuremodules : debian | buster - Copy requirements-azure.txt --- 1.80s
+2020-10-05 18:46:55,610 p=2091 u=jeremie n=ansible | redbeard28.terraform : debian | buster - Update System ------------------ 1.80s
+2020-10-05 18:46:55,610 p=2091 u=jeremie n=ansible | redbeard28.terraform : debian | buster - Unarchive Terraform archive ---- 1.76s
+2020-10-05 18:46:55,610 p=2091 u=jeremie n=ansible | redbeard28.azurecli : debian | buster - Refresh Cache ------------------- 1.65s
+2020-10-05 18:46:55,610 p=2091 u=jeremie n=ansible | redbeard28.kubectl : debian | buster - Download extracted Version v1.19.2 --- 1.27s
+2020-10-05 18:46:55,610 p=2091 u=jeremie n=ansible | redbeard28.terraform : debian | buster - Create terraform user ---------- 1.26s
+2020-10-05 18:46:55,610 p=2091 u=jeremie n=ansible | redbeard28.azurecli : debian | buster - Download Microsoft Repo GPG KEY --- 1.25s
+2020-10-05 18:46:55,610 p=2091 u=jeremie n=ansible | redbeard28.terraform : debian | buster - Download terraform archive Linux 64 bits --- 1.16s
+2020-10-05 18:46:55,610 p=2091 u=jeremie n=ansible | redbeard28.kubectl : debian | buster - Get latest version --------------- 1.12s
+2020-10-05 18:46:55,611 p=2091 u=jeremie n=ansible | redbeard28.git : debian | buster - Install Git -------------------------- 1.11s
+2020-10-05 18:46:55,611 p=2091 u=jeremie n=ansible | redbeard28.terraform : debian | buster - Install unzip to unarchive terraform --- 1.11s

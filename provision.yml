@@ -18,7 +18,7 @@
     - { role: redbeard28.git, tags: ["git, mandatory"] }
     - { role: redbeard28.pip3, tags: ["pip3", "blob", "mandatory"] }
     - { role: redbeard28.python3_apt, tags: ["python3_apt", "blob", "mandatory"] }
-#    - { role: redbeard28.pyazuremodules, tags: ["pyazuremodules", "blob", "mandatory"] }
-#    - { role: redbeard28.azurecli, tags: ["azurecli","cloud"] }
-#    - { role: redbeard28.terraform, tags: ["terraform","cloud"] }
+    - { role: redbeard28.pyazuremodules, tags: ["pyazuremodules", "blob", "mandatory"] }
+    - { role: redbeard28.azurecli, tags: ["azurecli","cloud"] }
+    - { role: redbeard28.terraform, tags: ["terraform","cloud"] }
 
